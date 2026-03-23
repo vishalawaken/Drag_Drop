@@ -192,7 +192,7 @@ const Board = () => {
                         </button>
                       </div>
 
-                      {/* 📦 Cards */}
+                      {/*  Cards */}
                       <Droppable droppableId={lane.id} type="CARD">
                         {(provided) => (
                           <div
