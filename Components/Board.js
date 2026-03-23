@@ -16,7 +16,7 @@ const Board = () => {
     return data ? JSON.parse(data) : [];
   });
 
-  // 🔄 Persist data
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("board", JSON.stringify(lanes));
@@ -44,7 +44,7 @@ const Board = () => {
     );
   };
 
-  // ➕ Add Card
+  // Add Card
   const addCard = (laneId, text) => {
     if (!text.trim()) return;
 
