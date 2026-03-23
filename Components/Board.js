@@ -134,9 +134,9 @@ const Board = () => {
 
     return (
         <DragDropContext onDragEnd={handleDragEnd}>
-            <div>
+            <div className="p-6">
                 {/* Add Lane */}
-                <div className="flex items-center gap-2 p-3 bg-gray-100 rounded-lg w-fit shadow-sm">
+                <div className="flex items-center gap-2 p-3 bg-gray-100 rounded-lg w-fit shadow-sm mb-6">
                     <input
                         type="text"
                         placeholder="Enter lane title"
