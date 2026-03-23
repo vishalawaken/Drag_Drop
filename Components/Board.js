@@ -64,13 +64,13 @@ const Board = () => {
     setLanes(updated);
   };
 
-  // 🔥 Drag End Handler
+  // Drag End Handler
   const handleDragEnd = (result) => {
     const { source, destination, type } = result;
 
     if (!destination) return;
 
-    // 🟢 Lane Reorder
+    //Lane Reorder
     if (type === "LANE") {
       const updatedLanes = [...lanes];
 
@@ -81,7 +81,7 @@ const Board = () => {
       return;
     }
 
-    // 💀 Card Movement
+    //Card Movement
 
     const sourceLaneIndex = lanes.findIndex(
       (lane) => lane.id === source.droppableId
@@ -97,7 +97,7 @@ const Board = () => {
     const sourceCards = [...sourceLane.cards];
     const [movedCard] = sourceCards.splice(source.index, 1);
 
-    // 🟢 Same Lane
+    // Same Lane
     if (sourceLaneIndex === destLaneIndex) {
       sourceCards.splice(destination.index, 0, movedCard);
 
@@ -109,7 +109,7 @@ const Board = () => {
 
       setLanes(updatedLanes);
     } else {
-      // 🔴 Cross Lane
+      // Cross Lane
 
       const destCards = [...destLane.cards];
       destCards.splice(destination.index, 0, movedCard);
@@ -153,7 +153,7 @@ const Board = () => {
           </button>
         </div>
 
-        {/* 🧱 Lanes */}
+        {/* Lanes */}
         <Droppable
           droppableId="lanes"
           direction="horizontal"
