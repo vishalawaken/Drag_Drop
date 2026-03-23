@@ -23,7 +23,7 @@ const Board = () => {
     }
   }, [lanes]);
 
-  // ➕ Add Lane
+  //  Add Lane
   const addLane = () => {
     if (!laneTitle.trim()) return;
 
@@ -37,7 +37,7 @@ const Board = () => {
     setLaneTitle("");
   };
 
-  // ❌ Delete Lane
+  //  Delete Lane
   const deleteLane = (laneId) => {
     setLanes((prev) =>
       prev.filter((lane) => lane.id !== laneId)
